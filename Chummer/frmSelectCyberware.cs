@@ -42,7 +42,9 @@ namespace Chummer
 		private List<ListItem> _lstCategory = new List<ListItem>();
 		private List<ListItem> _lstGrade = new List<ListItem>();
 
-		public enum Mode
+        //testing something
+
+        public enum Mode
 		{
 			Cyberware = 0,
 			Bioware = 1,
@@ -1018,6 +1020,18 @@ namespace Chummer
 
 			lblSearchLabel.Left = txtSearch.Left - 6 - lblSearchLabel.Width;
 		}
-		#endregion
+        #endregion
+
+        private CommonFunctions _objFunctions;
+
+        //I just wanted the PDF to open when you clicked the things that's all!
+        //this is probably terrible but at least it works and doesn't seem to break anything... probably...
+
+        private void lblSource_Click(object sender, EventArgs e)
+        {
+            _objFunctions = new CommonFunctions(_objCharacter);
+            CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+            _objFunctions.OpenPDF(lblSource.Text);
+        }
     }
 }
