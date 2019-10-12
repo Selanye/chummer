@@ -657,6 +657,15 @@ namespace Chummer
 
 			lblSearchLabel.Left = txtSearch.Left - 6 - lblSearchLabel.Width;
 		}
-		#endregion
-	}
+        #endregion
+
+        //I just wanted the PDF to open 
+        private CommonFunctions _objFunctions;
+
+        private void lblSource_Click(object sender, EventArgs e)
+        {
+            _objFunctions = new CommonFunctions(_objCharacter);
+            _objFunctions.OpenPDF(lblSource.Text);
+        }
+    }
 }

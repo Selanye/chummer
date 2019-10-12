@@ -673,6 +673,16 @@ namespace Chummer
 			cboNeighborhood.Left = intLeft + 6;
 			cboSecurity.Left = intLeft + 6;
 		}
-		#endregion
-	}
+        #endregion
+        //I just wanted the PDF to open when you clicked the things that's all!
+        //this is probably terrible but at least it works and doesn't seem to break anything... probably...
+        private CommonFunctions _objFunctions;
+
+        private void lblSource_Click(object sender, EventArgs e)
+        {
+            _objFunctions = new CommonFunctions(_objCharacter);
+            //CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+            _objFunctions.OpenPDF(lblSource.Text);
+        }
+    }
 }

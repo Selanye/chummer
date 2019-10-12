@@ -551,6 +551,11 @@ namespace Chummer
 				return _dblPowerPoints;
 			}
 		}
-		#endregion
-	}
+        #endregion
+
+        private void lblCritterPowerSource_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
